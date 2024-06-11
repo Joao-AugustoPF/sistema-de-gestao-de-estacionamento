@@ -2,7 +2,7 @@
 
 ### Integrantes
 Paulo Ronchi Francisconi - @pauloFrancisconi<br>
-Integrante 2 - conta github<br>
+Rhyan Willemann Orben -https://github.com/rhyanorben<br>
 Integrante 3 - conta github<br>
 ...
 
