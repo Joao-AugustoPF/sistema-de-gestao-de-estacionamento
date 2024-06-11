@@ -3,7 +3,7 @@
 ### Integrantes
 Paulo Ronchi Francisconi - @pauloFrancisconi<br>
 Rhyan Willemann Orben -https://github.com/rhyanorben<br>
-Integrante 3 - conta github<br>
+Wesley Schardosim Machado - https://github.com/Wesley-SM<br>
 ...
 
 ### Modelo Físico
