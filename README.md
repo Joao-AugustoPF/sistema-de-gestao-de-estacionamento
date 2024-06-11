@@ -5,7 +5,8 @@ Paulo Ronchi Francisconi - https://github.com/pauloFrancisconi<br>
 Rhyan Willemann Orben - https://github.com/rhyanorben<br>
 Wesley Schardosim Machado - https://github.com/Wesley-SM<br>
 Realdo Justino Junior - https://github.com/Realdo-Justino<br>
-Igor Rocha Speck https://github.com/igrocha
+Igor Rocha Speck https://github.com/igrocha<br>
+João Augusto - https://github.com/Joao-AugustoPF
 
 
 ### Modelo Físico
