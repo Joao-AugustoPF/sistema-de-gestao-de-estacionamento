@@ -6,7 +6,8 @@ CREATE TABLE Veiculos (
     cor VARCHAR(20)
 );
 
--- Tabela Vagas (
+-- Tabela Vagas 
+CREATE TABLE VAGAS (
     vaga_id SERIAL PRIMARY KEY,
     numero_vaga INTEGER NOT NULL,
     andar INTEGER,
