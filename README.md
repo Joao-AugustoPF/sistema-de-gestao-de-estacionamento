@@ -13,7 +13,7 @@ João Augusto Pupo Fagundes - https://github.com/Joao-AugustoPF
 Utilizamos a ferramenta de modelagem de dados [dbeaver.io](https://dbeaver.io/) para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
 
 
-![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/Modelo_fisico_bd_gestao_estacionamento.png)
+![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/DIAGRAMA-BANCO-DE-DADOS.png)
   
 ### Dicionário de Dados
 As informações sobre as tabelas e índices foram documentados na planilha [template1.xlsx](dicionario_dados/template1.xlsx).
@@ -23,7 +23,7 @@ Para este projeto foi utilizado o banco de dados [MySQL](https://www.mysql.com/)
 
 
 Abaixo, segue os scripts SQL separados por tipo:
-+ DDL [ddl.sql](scripts_sql/ddl.sql)
++ DDL [script-banco-de-dados.sql](scripts_sql/script-banco-de-dados.sql)
 
 
 ### Código Fonte do CRUD
