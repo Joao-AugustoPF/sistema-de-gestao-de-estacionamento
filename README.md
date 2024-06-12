@@ -16,7 +16,7 @@ Utilizamos a ferramenta de modelagem de dados [dbeaver.io](https://dbeaver.io/) 
 ![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/DIAGRAMA-BANCO-DE-DADOS.png)
   
 ### Dicionário de Dados
-As informações sobre as tabelas e índices foram documentados na planilha [](dicionario_dados/).
+As informações sobre as tabelas e índices foram documentados na planilha [dicionario_dados](dicionario_dados/dicionario_dados).
 
 ### Scripts SQL
 Para este projeto foi utilizado o banco de dados [MySQL](https://www.mysql.com/) <br>
