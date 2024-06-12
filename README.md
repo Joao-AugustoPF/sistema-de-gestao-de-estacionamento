@@ -16,7 +16,7 @@ Utilizamos a ferramenta de modelagem de dados [dbeaver.io](https://dbeaver.io/) 
 ![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/DIAGRAMA-BANCO-DE-DADOS.png)
   
 ### Dicionário de Dados
-As informações sobre as tabelas e índices foram documentados na planilha [template1.xlsx](dicionario_dados/template1.xlsx).
+As informações sobre as tabelas e índices foram documentados na planilha [](dicionario_dados/).
 
 ### Scripts SQL
 Para este projeto foi utilizado o banco de dados [MySQL](https://www.mysql.com/) <br>
@@ -30,4 +30,5 @@ Abaixo, segue os scripts SQL separados por tipo:
 
 
 ### Relatório Final
-O relatório final está disponível no arquivo [template1.docx](relatorio/template1.docx).
+O relatório final está disponível no arquivo [Relatório_projeto_estacionamento.docx](relatorio/Relatório_projeto_estacionamento.docx).
+
