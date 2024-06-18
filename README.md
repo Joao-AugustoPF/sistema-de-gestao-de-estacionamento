@@ -30,5 +30,5 @@ Abaixo, segue os scripts SQL separados por tipo:
 
 
 ### Relatório Final
-O relatório final está disponível no arquivo [Relatório_projeto_estacionamento.docx](relatorio/Relatório_projeto_estacionamento.docx).
+O relatório final está disponível no arquivo [Relatório_projeto_estacionamento.docx](relatorio/Relatorio_projeto_estacionamento.docx).
 
