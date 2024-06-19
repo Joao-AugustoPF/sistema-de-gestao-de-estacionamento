@@ -10,7 +10,7 @@ João Augusto Pupo Fagundes - https://github.com/Joao-AugustoPF
 
 
 ### Modelo Físico
-Utilizamos a ferramenta de modelagem de dados [dbeaver.io](https://dbeaver.io/) para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
+Utilizamos a ferramenta de modelagem de dados MySqlWorkbench para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
 
 
 ![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/DIAGRAMA-BANCO-DE-DADOS.png)
@@ -19,7 +19,10 @@ Utilizamos a ferramenta de modelagem de dados [dbeaver.io](https://dbeaver.io/) 
 As informações sobre as tabelas e índices foram documentados na planilha [dicionario_dados](dicionario_dados/dicionario_dados).
 
 ### Scripts SQL
-Para este projeto foi utilizado o banco de dados [MySQL](https://www.mysql.com/) <br>
+Para este projeto foi utilizado:
++ banco de dados [MySQL](https://www.mysql.com/) <br>
++ Node.js para a criação da api <br>
+
 
 
 Abaixo, segue os scripts SQL separados por tipo:
