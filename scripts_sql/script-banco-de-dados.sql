@@ -16,9 +16,15 @@ CREATE TABLE Funcionarios (
 );
 
 CREATE TABLE Veiculos (
-    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     placa VARCHAR(10) NOT NULL,
-    tipo_veiculo ENUM('Moto', 'Caminhão', 'Carro') NOT NULL
+    tipo_veiculo ENUM('carro', 'moto', 'caminhão') NOT NULL,
+    modelo VARCHAR(50),
+    marca VARCHAR(50),
+    cor VARCHAR(20),
+    ano INT,
+    proprietario VARCHAR(100),
+    telefone_proprietario VARCHAR(15)
 );
 
 CREATE TABLE TipoVaga (
