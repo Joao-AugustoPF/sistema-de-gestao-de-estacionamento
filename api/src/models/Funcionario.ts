@@ -1,4 +1,3 @@
-// src/models/Funcionario.ts
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../database';
 import Permissao from './Permissao';

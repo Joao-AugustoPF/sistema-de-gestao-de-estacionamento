@@ -1,4 +1,3 @@
-// src/models/Tarifa.ts
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../database';
 import TipoVaga from './TipoVaga';

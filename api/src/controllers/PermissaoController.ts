@@ -1,4 +1,3 @@
-// src/controllers/PermissaoController.ts
 import { Request, Response } from 'express';
 import Permissao from '../models/Permissao';
 

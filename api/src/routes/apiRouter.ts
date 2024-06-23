@@ -1,4 +1,3 @@
-// src/routes/apiRouter.ts
 import { Router } from 'express';
 import permissaoRoutes from './permissaoRoutes';
 import funcionarioRoutes from './funcionarioRoutes';

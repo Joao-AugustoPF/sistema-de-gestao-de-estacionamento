@@ -1,4 +1,3 @@
-// src/routes/veiculoRoutes.ts
 import { Router } from 'express';
 import { VeiculoController } from '../controllers/VeiculoController';
 

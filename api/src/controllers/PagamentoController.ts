@@ -1,4 +1,3 @@
-// src/controllers/PagamentoController.ts
 import { Request, Response } from 'express';
 import Pagamento from '../models/Pagamento';
 

@@ -1,4 +1,3 @@
-// src/routes/tarifaRoutes.ts
 import { Router } from 'express';
 import { TarifaController } from '../controllers/TarifaController';
 

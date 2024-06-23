@@ -1,4 +1,3 @@
-// src/routes/movimentacaoRoutes.ts
 import { Router } from 'express';
 import { MovimentacaoController } from '../controllers/MovimentacaoController';
 

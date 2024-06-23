@@ -1,4 +1,3 @@
-// src/routes/vagaRoutes.ts
 import { Router } from 'express';
 import { VagaController } from '../controllers/VagaController';
 

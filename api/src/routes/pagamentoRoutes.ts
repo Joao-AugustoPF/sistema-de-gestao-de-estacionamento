@@ -1,4 +1,3 @@
-// src/routes/pagamentoRoutes.ts
 import { Router } from 'express';
 import { PagamentoController } from '../controllers/PagamentoController';
 

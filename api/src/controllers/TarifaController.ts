@@ -1,4 +1,3 @@
-// src/controllers/TarifaController.ts
 import { Request, Response } from 'express';
 import Tarifa from '../models/Tarifa';
 

@@ -1,4 +1,3 @@
-// src/controllers/MovimentacaoController.ts
 import { Request, Response } from 'express';
 import Movimentacao from '../models/Movimentacao';
 

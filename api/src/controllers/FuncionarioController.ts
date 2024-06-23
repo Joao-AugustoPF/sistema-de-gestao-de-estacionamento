@@ -1,4 +1,3 @@
-// src/controllers/FuncionarioController.ts
 import { Request, Response } from 'express';
 import Funcionario from '../models/Funcionario';
 

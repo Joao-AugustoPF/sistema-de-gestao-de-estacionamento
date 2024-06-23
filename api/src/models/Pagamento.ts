@@ -1,4 +1,3 @@
-// src/models/Pagamento.ts
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../database';
 

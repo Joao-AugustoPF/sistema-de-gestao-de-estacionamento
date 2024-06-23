@@ -1,4 +1,3 @@
-// src/models/Movimentacao.ts
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../database';
 import Vaga from './Vaga';

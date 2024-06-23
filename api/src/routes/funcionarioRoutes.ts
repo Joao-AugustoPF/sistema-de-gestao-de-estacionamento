@@ -1,4 +1,3 @@
-// src/routes/funcionarioRoutes.ts
 import { Router } from 'express';
 import { FuncionarioController } from '../controllers/FuncionarioController';
 import { authorize } from '../middlewares/authorize';

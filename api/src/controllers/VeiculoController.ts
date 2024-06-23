@@ -1,4 +1,3 @@
-// src/controllers/VeiculoController.ts
 import { Request, Response } from 'express';
 import Veiculo from '../models/Veiculo';
 

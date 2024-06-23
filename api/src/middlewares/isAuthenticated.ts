@@ -1,4 +1,3 @@
-// src/middleware/isAuthenticated.ts
 import { Request, Response, NextFunction } from 'express';
 import passport from 'passport';
 
@@ -14,9 +13,7 @@ interface User {
 
 passport.initialize();
 
-/**
- * Middleware para verificar se o usuário está autenticado via JWT.
- */
+// Middleware para verificar se o usuário está autenticado via JWT.
 function isAuthenticated(req: Request, res: Response, next: NextFunction) {
   passport.authenticate('jwt', { session: false }, (err: Error | null, user: User | false, info: any) => {
     if (err) {

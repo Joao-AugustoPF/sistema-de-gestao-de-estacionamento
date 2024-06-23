@@ -1,5 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
-import sequelize from '../database'; // Ajuste o caminho conforme necessário
+import sequelize from '../database';
 import bcrypt from 'bcryptjs';
 
 export class User extends Model {

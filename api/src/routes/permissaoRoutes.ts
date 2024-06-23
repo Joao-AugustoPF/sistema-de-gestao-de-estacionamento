@@ -1,4 +1,3 @@
-// src/routes/permissaoRoutes.ts
 import { Router } from 'express';
 import { PermissaoController } from '../controllers/PermissaoController';
 

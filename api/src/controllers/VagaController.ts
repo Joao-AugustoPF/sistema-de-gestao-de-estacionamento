@@ -1,4 +1,3 @@
-// src/controllers/VagaController.ts
 import { Request, Response } from 'express';
 import Vaga from '../models/Vaga';
 

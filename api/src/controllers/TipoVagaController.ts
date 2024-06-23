@@ -1,4 +1,3 @@
-// src/controllers/TipoVagaController.ts
 import { Request, Response } from 'express';
 import TipoVaga from '../models/TipoVaga';
 

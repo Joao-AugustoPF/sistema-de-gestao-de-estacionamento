@@ -31,7 +31,6 @@ app.use('/auth', authRoutes);
 
 app.use('/api', apiRouter)
 
-// Definir porta e iniciar servidor
 const PORT = 4000;
 
 sequelize.sync() // CUIDADO: `force: true`
@@ -46,7 +45,6 @@ sequelize.sync() // CUIDADO: `force: true`
 sequelize.authenticate()
   .then(() => {
     console.log('Conexão com o banco de dados estabelecida com sucesso.');
-    // Inicia o servidor apenas se a conexão com o banco de dados for bem-sucedida
     app.listen(PORT, () => {
       console.log(`Servidor rodando na porta ${PORT}`);
     });

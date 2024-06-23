@@ -1,4 +1,3 @@
-// src/config/passport.ts
 import passport from 'passport';
 import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
 import Funcionario from '../src/models/Funcionario';

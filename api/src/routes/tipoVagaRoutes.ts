@@ -1,4 +1,3 @@
-// src/routes/tipoVagaRoutes.ts
 import { Router } from 'express';
 import { TipoVagaController } from '../controllers/TipoVagaController';
 

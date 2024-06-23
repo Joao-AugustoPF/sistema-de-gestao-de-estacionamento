@@ -1,4 +1,3 @@
-// src/models/Vaga.ts
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../database';
 import TipoVaga from './TipoVaga';
