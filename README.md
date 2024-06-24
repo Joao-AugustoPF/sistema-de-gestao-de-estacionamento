@@ -16,7 +16,17 @@ Utilizamos a ferramenta de modelagem de dados MySqlWorkbench para criação do m
 ![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/Diagrama-Fisico.png)
   
 ### Dicionário de Dados
-As informações sobre as tabelas e índices foram documentados na planilha [dicionario_dados](dicionario_dados/dicionario_dados).
+As informações sobre as tabelas e índices foram documentados nas planilhas: 
+
+1. Funcionarios - [dicionarioFuncionarios.xlsx](https://github.com/user-attachments/files/15957431/dicionarioFuncionarios.xlsx)
+2. Permissoes - [dicionarioPermissoes.xlsx](https://github.com/user-attachments/files/15957436/dicionarioPermissoes.xlsx)
+3. Veiculos - [dicionarioVeiculos.xlsx](https://github.com/user-attachments/files/15957438/dicionarioVeiculos.xlsx)
+4. TipoVaga - [dicionarioTipoVaga.xlsx](https://github.com/user-attachments/files/15957441/dicionarioTipoVaga.xlsx)
+5. Vagas - [dicionarioVagas.xlsx](https://github.com/user-attachments/files/15957442/dicionarioVagas.xlsx)
+6. Tarifas - [dicionarioTarifas.xlsx](https://github.com/user-attachments/files/15957443/dicionarioTarifas.xlsx)
+7. Pagamentos - [dicionarioPagamentos.xlsx](https://github.com/user-attachments/files/15957445/dicionarioPagamentos.xlsx)
+8. Movimentacoes - [dicionarioMovimentacoes.xlsx](https://github.com/user-attachments/files/15957446/dicionarioMovimentacoes.xlsx)
+
 
 ### Scripts SQL
 Para este projeto foi utilizado:
@@ -33,5 +43,6 @@ Abaixo, segue os scripts SQL separados por tipo:
 
 
 ### Relatório Final
-O relatório final está disponível no arquivo [Relatório_projeto_estacionamento.docx](relatorio/Relatorio_projeto_estacionamento.docx).
+O relatório final está disponível no arquivo [Relatorio_projeto_estacionamento.docx](https://github.com/user-attachments/files/15957460/Relatorio_projeto_estacionamento.docx).
+
 
