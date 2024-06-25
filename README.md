@@ -35,7 +35,7 @@ Abaixo, segue os scripts SQL separados por tipo:
 ### Código Fonte do CRUD
 
 + Linguagem de programação: Javascript e Typescript, utilizando Ambiente de execução Node.js
-+ Framework...
++ Framework Express
 
 
 ### Relatório Final
