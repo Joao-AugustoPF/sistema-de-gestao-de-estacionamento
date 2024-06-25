@@ -1,4 +1,6 @@
-/* FUNÇÃO: */
+-- Função
+
+DELIMITER $$
 
 CREATE FUNCTION calcular_valor(movimentacao_id INT)
 RETURNS DECIMAL(10, 2)
@@ -20,10 +22,13 @@ BEGIN
     SET valor_total = tempo_total * valor_por_hora;
 
     RETURN valor_total;
-END;
+END$$
 
+DELIMITER ;
 
-/* STORED PROCEDURE: */
+-- Procedimento Armazenado
+
+DELIMITER $$
 
 CREATE PROCEDURE registrar_entrada(
     IN p_vaga_id INT,
@@ -36,10 +41,13 @@ BEGIN
     UPDATE Vagas
     SET disponivel = 0, veiculo_id = p_veiculo_id
     WHERE id = p_vaga_id;
-END;
+END$$
 
+DELIMITER ;
 
-/* TRIGGER: */ 
+-- Trigger
+
+DELIMITER $$
 
 CREATE TRIGGER atualizar_disponibilidade_vaga
 AFTER UPDATE ON Movimentacoes
@@ -50,4 +58,6 @@ BEGIN
         SET disponivel = 1, veiculo_id = NULL
         WHERE id = NEW.vaga_id;
     END IF;
-END;
+END$$
+
+DELIMITER ;
