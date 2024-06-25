@@ -34,6 +34,9 @@ Abaixo, segue os scripts SQL separados por tipo:
 
 ### Código Fonte do CRUD
 
++ Linguagem de programação: Javascript e Typescript, utilizando Ambiente de execução Node.js
++ Framework...
+
 
 ### Relatório Final
 O relatório final está disponível no arquivo [Relatório_projeto_estacionamento.docx](relatorio/Relatorio_projeto_estacionamento.docx).
