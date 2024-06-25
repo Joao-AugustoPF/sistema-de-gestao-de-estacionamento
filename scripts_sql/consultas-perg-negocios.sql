@@ -1,4 +1,3 @@
-
 -- 1.Quantos veículos estão estacionados no momento?
 SELECT 
     tv.descricao AS tipo_vaga,
