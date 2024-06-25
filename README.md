@@ -16,7 +16,7 @@ Utilizamos a ferramenta de modelagem de dados MySqlWorkbench para criação do m
 ![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/Diagrama-Fisico.png)
   
 ### Dicionário de Dados
-As informações sobre as tabelas e índices foram documentados na planilha [dicionario_dados](dicionario_dados/dicionario_dados).
+As informações sobre as tabelas e índices foram documentados nas planilhas [dicionario_dados](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/tree/main/dicionario_dados).
 
 ### Scripts SQL
 Para este projeto foi utilizado:
@@ -26,10 +26,10 @@ Para este projeto foi utilizado:
 
 
 Abaixo, segue os scripts SQL separados por tipo:
-+ DDL [script-banco-de-dados.sql](scripts_sql/script-banco-de-dados.sql)
-+ DML [script_populacao_tabelas.sq](scripts_sql/script_populacao_tabelas.sql)
-+ Índices [indices.sql](scripts_sql/indices.sql)
-+ Função, Procedure e Trigger [funcproctrigger.sql](scripts_sql/funcproctrigger.sql)
++ [DDL](scripts_sql/script-banco-de-dados.sql)
++ [DML](scripts_sql/script_populacao_tabelas.sql)
++ [Índices](scripts_sql/indices.sql)
++ [Função, Procedure e Trigger](scripts_sql/funcproctrigger.sql)
 
 
 ### Código Fonte do CRUD
