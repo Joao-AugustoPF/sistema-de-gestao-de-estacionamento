@@ -1,52 +1,49 @@
 -- 1.Quantos veículos estão estacionados no momento?
 SELECT 
     tv.descricao AS tipo_vaga,
-    COUNT(v.id) AS quantidade_veiculos_estacionados
+    COUNT(v.id) AS quantidade_veiculo_estacionados
 FROM 
-    Vagas v
+    Vaga v
 JOIN 
-    TipoVaga tv ON v.tipo_id = tv.id
+    TipoVaga tv ON v.id = tv.id
 LEFT JOIN 
-    Movimentacoes m ON v.id = m.vaga_id
-WHERE 
-    m.saida IS NULL
+    Movimentacao m ON v.id = m.id AND m.saida IS NULL
 GROUP BY 
     tv.descricao;
 
 
---2.Qual é a receita total por tipo de veículo até o momento?
+
+-- 2.Qual é a receita total por tipo de veículo até o momento?
 SELECT 
-    tv.descricao AS tipo_veiculo, 
-    SUM(p.valor_pago) AS receita_total
+    v.tipo_veiculo AS tipo_veiculo, 
+    SUM(p.valorPago) AS receita_total
 FROM 
-    Movimentacoes m
+    Movimentacao m
 JOIN 
-    Veiculos v ON m.veiculo_id = v.id
+    Veiculo v ON m.id = v.id
 JOIN 
-    TipoVaga tv ON v.tipo_veiculo = tv.descricao
-JOIN 
-    Pagamentos p ON m.id = p.movimentacao_id
+    Pagamento p ON m.id = p.id
 GROUP BY 
-    tv.descricao;
+    v.tipo_veiculo;
 
 
---3.Qual é a média de receita por pagamento realizado?
+
+-- 3.Qual é a média de receita por pagamento realizado?
 SELECT 
-    AVG(p.valor_pago) AS media_receita
+    AVG(p.valorPago) AS media_receita
 FROM 
-    Pagamentos p;
+    Pagamento p;
 
 
---4.Qual é a duração média por tipo de veículo?
+-- 4.Qual é a duração média por tipo de veículo?
 SELECT 
-    tv.descricao AS tipo_veiculo, 
+    v.tipo_veiculo AS tipo_veiculo, 
     AVG(TIMESTAMPDIFF(HOUR, m.entrada, IFNULL(m.saida, NOW()))) AS duracao_media_horas
 FROM 
-    Movimentacoes m
+    Movimentacao m
 JOIN 
-    Veiculos v ON m.veiculo_id = v.id
-JOIN 
-    TipoVaga tv ON v.tipo_veiculo = tv.descricao
+    Veiculo v ON m.id = v.id
 GROUP BY 
-    tv.descricao;
+    v.tipo_veiculo;
+
 
