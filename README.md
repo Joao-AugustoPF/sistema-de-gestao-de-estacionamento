@@ -13,7 +13,7 @@ João Augusto Pupo Fagundes - https://github.com/Joao-AugustoPF
 Utilizamos a ferramenta de modelagem de dados MySqlWorkbench para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.<br>
 
 
-![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/DIAGRAMA-BANCO-DE-DADOS.png)
+![image](https://github.com/Joao-AugustoPF/sistema-de-gestao-de-estacionamento/blob/main/modelo_fisico/Diagrama-Fisico.png)
   
 ### Dicionário de Dados
 As informações sobre as tabelas e índices foram documentados na planilha [dicionario_dados](dicionario_dados/dicionario_dados).
@@ -27,6 +27,9 @@ Para este projeto foi utilizado:
 
 Abaixo, segue os scripts SQL separados por tipo:
 + DDL [script-banco-de-dados.sql](scripts_sql/script-banco-de-dados.sql)
++ DML [script_populacao_tabelas.sq](scripts_sql/script_populacao_tabelas.sql)
++ Índices [indices.sql](scripts_sql/indices.sql)
++ Função, Procedure e Trigger [funcproctrigger.sql](scripts_sql/funcproctrigger.sql)
 
 
 ### Código Fonte do CRUD
