@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>gameplayEvents</name>
+    <events>
+        <event-block sid="645940869120431">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="921720439804046" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="788939095105590" type="mainCharacterSprite">
+                    <param id="0" name="Pin to">mainCharacterColision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327439210570977">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="533917367358205" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="862226705558655" type="mainCharacterSprite">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327571765674666">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="122909759313622" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="739296052707800" type="mainCharacterSprite">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="898777196303540">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="562779555342539" type="mainCharacterColision">
+                    <param id="0" name="Instance variable">tookDamage</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="761333735131196">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="491489348610932" type="mainCharacterColision">
+                            <param id="0" name="Instance variable">attacking</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="0" name="Stop" sid="756683973992372" type="mainCharacterColision" />
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="956888767685742" type="mainCharacterColision">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="538187332234490" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="276234866655373" type="mainCharacterColision">
+                            <param id="0" name="Instance variable">attacking</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="884254849166341" type="mainCharaterSwordAttacks" />
+                        <action id="-3" name="Set position" sid="836170651791200" type="mainCharaterSwordAttacks">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">21</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="180785488125975" type="mainCharaterSwordAttacks" />
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="133898763386535" type="mainCharacterColision">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="357802050480361">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="273108295019991" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="993765888881871">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="430409176807720" type="mainCharacterColision" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="707345948134780" type="mainCharacterSprite">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="942420764195510">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="661501231099883" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="553748907336412" type="mainCharacterSprite">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="708977004509065">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="461257430323743" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="579599426560251" type="System">
+                                    <param id="0" name="Object to create">mainCharaterSwordAttacks</param>
+                                    <param id="1" name="Layer">&quot;CharacterAndItems&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="201646050777299" type="mainCharacterColision">
+                                    <param id="0" name="Instance variable">attacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="247560079760034" type="mainCharaterSwordAttacks">
+                                    <param id="0" name="Pin to">mainCharacterSprite</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="564599782028184" type="mainCharacterSprite">
+                                    <param id="0" name="Animation">&quot;Attack01&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="207587354077592" type="mainCharaterSwordAttacks">
+                                    <param id="0" name="Animation">&quot;Attack01&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="216814550143882">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="219062589870927" type="Keyboard">
+                                    <param id="0" name="Key">88</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="587217422882210" type="System">
+                                    <param id="0" name="Object to create">mainCharaterSwordAttacks</param>
+                                    <param id="1" name="Layer">&quot;CharacterAndItems&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="729058148263657" type="mainCharacterColision">
+                                    <param id="0" name="Instance variable">attacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="769934956587051" type="mainCharaterSwordAttacks">
+                                    <param id="0" name="Pin to">mainCharacterSprite</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="966544713850381" type="mainCharacterSprite">
+                                    <param id="0" name="Animation">&quot;Attack02&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="842560220532622" type="mainCharaterSwordAttacks">
+                                    <param id="0" name="Animation">&quot;Attack01&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="211006848979961">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="862343316369052" type="enemySpawner" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
