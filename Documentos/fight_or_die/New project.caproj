@@ -599,7 +599,7 @@
         <object-type name="enemyCharacter" sid="789343401442604">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Pathfinding" sid="363227439851271">
+                <behavior-type name="Pathfinding" sid="216710385485652">
                     <behavior id="Pathfinding" />
                 </behavior-type>
             </behaviors>

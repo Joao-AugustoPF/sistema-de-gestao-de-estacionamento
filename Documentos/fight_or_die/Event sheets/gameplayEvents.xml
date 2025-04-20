@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>gameplayEvents</name>
     <events>
+        <variable constant="0" name="playerHealth" sid="526423826964375" static="0" type="number">3</variable>
+        <variable constant="0" name="playerXP" sid="152072579437615" static="0" type="number">0</variable>
         <event-block sid="645940869120431">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="921720439804046" type="System" />
@@ -11,6 +13,14 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="788939095105590" type="mainCharacterSprite">
                     <param id="0" name="Pin to">mainCharacterColision</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="514934090627747" type="System">
+                    <param id="0" name="Variable">playerHealth</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="108778218085980" type="System">
+                    <param id="0" name="Variable">playerXP</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -215,38 +225,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="853447070754684">
-            <conditions>
-                <condition id="-11" name="For Each" sid="772995764206531" type="System">
-                    <param id="0" name="Object">enemySpawner</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="211006848979961">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="862343316369052" type="enemySpawner" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="593327249197216">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="768059296108072" type="System">
-                                    <param id="0" name="Interval (seconds)">random(5)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="368995288798760" type="enemySpawner">
-                                    <param id="0" name="Object">enemyCharacter</param>
-                                    <param id="1" name="Layer">&quot;CharacterAndItems&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="830195653392769">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="196175509737826" type="mainCharaterSwordAttacks">
@@ -263,6 +241,38 @@
             </conditions>
             <actions />
             <sub-events>
+                <event-block sid="853447070754684">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="772995764206531" type="System">
+                            <param id="0" name="Object">enemySpawner</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="211006848979961">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="862343316369052" type="enemySpawner" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="593327249197216">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="768059296108072" type="System">
+                                            <param id="0" name="Interval (seconds)">random(3)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="368995288798760" type="enemySpawner">
+                                            <param id="0" name="Object">enemyCharacter</param>
+                                            <param id="1" name="Layer">&quot;CharacterAndItems&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="438280846296724">
                     <conditions>
                         <condition id="-11" name="For Each" sid="411015748069631" type="System">
@@ -274,15 +284,38 @@
                             <param id="0" name="Animation">&quot;Walk&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="176871979801191" type="enemyCharacter">
-                            <param id="0" name="X">mainCharacterColision.X</param>
-                            <param id="1" name="Y">mainCharacterColision.Y</param>
+                        <action id="-1" name="Set X" sid="853881437645730" type="enemyCharacter">
+                            <param id="0" name="X">enemyCharacter.X + cos(angle(enemyCharacter.X, enemyCharacter.Y, mainCharacterColision.X, mainCharacterColision.Y)) * 150 * dt</param>
                         </action>
-                        <action behavior="Pathfinding" id="14" name="Set speed" sid="904307857886397" type="enemyCharacter">
-                            <param id="0" name="Speed">200</param>
+                        <action id="-2" name="Set Y" sid="665699458078484" type="enemyCharacter">
+                            <param id="0" name="Y">enemyCharacter.Y + sin(angle(enemyCharacter.X, enemyCharacter.Y, mainCharacterColision.X, mainCharacterColision.Y)) * 150 * dt</param>
                         </action>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="284572677257864" type="enemyCharacter" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="427826914284849">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="413156418027197" type="enemyCharacter">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">mainCharacterColision.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="531175862741812" type="enemyCharacter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="114186757158470">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="216157677165278" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="614034168035795" type="enemyCharacter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
