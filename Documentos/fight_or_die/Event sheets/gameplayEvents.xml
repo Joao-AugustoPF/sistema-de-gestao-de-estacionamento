@@ -22,6 +22,9 @@
                     <param id="0" name="Variable">playerXP</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="5" name="Set frame" sid="582323227034931" type="mainCharacterHealthUi">
+                    <param id="0" name="Frame number">playerHealth</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="327439210570977">
@@ -68,7 +71,7 @@
                             <param id="0" name="Input">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="538187332234490" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                            <param id="0" name="Seconds">0.4</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="276234866655373" type="mainCharacterColision">
                             <param id="0" name="Instance variable">attacking</param>
@@ -110,6 +113,31 @@
                                 <action id="4" name="Set animation" sid="553748907336412" type="mainCharacterSprite">
                                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="467351059518324">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="676533080495545" type="mainCharacterColision">
+                                    <param id="0" name="Object">enemyCharacter</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="238989015688702" type="System">
+                                    <param id="0" name="Variable">playerHealth</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="803199672204714" type="mainCharacterColision">
+                                    <param id="0" name="Instance variable">tookDamage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="332400191074718" type="mainCharacterHealthUi">
+                                    <param id="0" name="Frame number">playerHealth</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="774503715043278" type="mainCharacterSprite">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">0.7</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -235,9 +263,25 @@
                 <action id="-9" name="Destroy" sid="754575896740961" type="enemyCharacter" />
             </actions>
         </event-block>
+        <event-block sid="917810630357132">
+            <conditions>
+                <condition behavior="Flash" id="1" name="On flash ended" sid="336061323674043" type="mainCharacterSprite" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="362139640185199" type="mainCharacterColision">
+                    <param id="0" name="Instance variable">tookDamage</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="883824156537180">
             <conditions>
                 <condition id="-1" name="Every tick" sid="306469517466263" type="System" />
+                <condition id="-14" name="Compare variable" sid="349199052908009" type="System">
+                    <param id="0" name="Variable">playerHealth</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -258,7 +302,7 @@
                                 <event-block sid="593327249197216">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="768059296108072" type="System">
-                                            <param id="0" name="Interval (seconds)">random(3)</param>
+                                            <param id="0" name="Interval (seconds)">random(10 - (10 * 2.0 * dt))</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -311,6 +355,56 @@
                             </conditions>
                             <actions>
                                 <action id="7" name="Set mirrored" sid="614034168035795" type="enemyCharacter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="654625767777806">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="675263825288628" type="System">
+                    <param id="0" name="Variable">playerHealth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="576678620914086">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="176753963011102" type="System">
+                            <param id="0" name="Object">enemyCharacter</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="783981724361104" type="enemyCharacter">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="987277010815447">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="971023812850249" type="enemyCharacter">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">mainCharacterColision.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="905781769124419" type="enemyCharacter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687663656761456">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="709573016132630" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="116731553331986" type="enemyCharacter">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>

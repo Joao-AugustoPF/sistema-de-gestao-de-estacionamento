@@ -15,7 +15,9 @@
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -94,6 +96,9 @@
             <behaviors>
                 <behavior-type name="Pin" sid="519504122313773">
                     <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="491150082068106">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -717,6 +722,43 @@
                             <point x="0.57" y="0.415" />
                             <point x="0.565" y="0.565" />
                             <point x="0.425" y="0.565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mainCharacterHealthUi" sid="886541087294167">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="716909374637167">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206872790841907" speed="5">
+                    <frame duration="1" hotspotX="0.500081" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500081" hotspotY="0.5" original-source="C:\Users\Realdo\OneDrive - SATC - Associação Beneficente da Indústria Carbonífera de Santa Catarina\Documents\db\sistema-de-gestao-de-estacionamento\Documentos\fight_or_die\assests\Common\Heart_pixelart_(transparent_background).svg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.332522" y="0" />
+                            <point x="0.332522" y="0.333171" />
+                            <point x="0" y="0.333171" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500081" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.332522" y="0" />
+                            <point x="0.332522" y="0.333171" />
+                            <point x="0" y="0.333171" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500081" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.332522" y="0" />
+                            <point x="0.332522" y="0.333171" />
+                            <point x="0" y="0.333171" />
                         </collision-poly>
                     </frame>
                 </animation>
