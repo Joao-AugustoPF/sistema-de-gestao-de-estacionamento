@@ -259,9 +259,23 @@
                     <param id="0" name="Object">enemyCharacter</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="754575896740961" type="enemyCharacter" />
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="669038532148801">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="113813496873860" type="System">
+                            <param id="0" name="Object">enemyCharacter</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="287067466454393" type="System">
+                            <param id="0" name="Variable">playerXP</param>
+                            <param id="1" name="Value">playerXp + enemyCharacter.xp</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="681105353821146" type="enemyCharacter" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="917810630357132">
             <conditions>

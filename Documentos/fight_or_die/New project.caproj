@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -603,6 +604,9 @@
         </object-type>
         <object-type name="enemyCharacter" sid="789343401442604">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="xp" sid="398558578584276" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="216710385485652">
                     <behavior id="Pathfinding" />
@@ -763,6 +767,9 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="474690713473224">
+            <plugin id="progressbar" />
         </object-type>
     </object-folder>
     <families />
